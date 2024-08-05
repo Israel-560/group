@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sponsor Registration Form</title>
+    <style>
+    	
+        body {
+            font-family: Arial, sans-serif;
+            background-color: floralwhite;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        input[type="text"], input[type="email"], input[type="file"], input[type="checkbox"], textarea, select {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .lang-checkboxes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .lang-checkboxes label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .lang-checkboxes input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        .form-group .btn {
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        .form-group .btn.secondary {
+            background-color: #aaa;
+            color: #333;
+        }
+        .form-group .btn:hover {
+            background-color: #45a049;
+        }
+        .radio-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+    </style>
+    <script type="text/javascript">
+        // JavaScript function to show a success message
+        function showSuccessMessage(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            alert('Submitted successfully!');
+        }
+    </script>
+</head>
+<body>
+    
+<div class="container">
+        <h2>Sponsor Registration Form</h2>
+        <form action="#" method="POST" onsubmit="showSuccessMessage(event)">
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="title" value="Mr." required>
+                    Mr.
+                </label>
+                <label>
+                    <input type="radio" name="title" value="Mrs." required>
+                    Mrs.
+                </label>
+                <label>
+                    <input type="radio" name="title" value="Ms." required>
+                    Ms.
+                </label>
+            </div>
+            
+            <div class="form-group">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+            <div class="form-group">
+                <label for="email1">Mail Address 1:</label>
+                <input type="email" id="email1" name="email1" required>
+            </div>
+            <div class="form-group">
+                <label for="email2">Mail Address 2:</label>
+                <input type="email" id="email2" name="email2">
+            </div>
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <div class="form-group">
+                <label for="state">State:</label>
+                <select id="state" name="state" required>
+                    <option value="">Select State</option>
+                    <option value="AM">America</option>
+                    <option value="EU">Europe</option>
+                    <option value="AU">Australia</option>
+                    <option value="AS">Asia</option>
+                    <option value="AR">Arabs</option>
+                    <option value="AF">Africa</option>
+                    <!-- Add other options as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="zip">ZIP:</label>
+                <input type="text" id="zip" name="zip" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile:</label>
+                <input type="text" id="mobile" name="mobile" required>
+            </div>
+            <div class="form-group">
+                <label>Languages Known:</label>
+                <div class="lang-checkboxes">
+                    <label>
+                        <input type="checkbox" name="language[]" value="FRENCH"> FRENCH
+                    </label>
+                    <label>
+                        <input type="checkbox" name="language[]" value="ARABIC"> ARABIC
+                    </label>
+                    <label>
+                        <input type="checkbox" name="language[]" value="English"> English
+                    </label>
+                    <label>
+                        <input type="checkbox" name="language[]" value="KISWAHILI"> KISWAHILI
+                    </label>
+                </div>
+            <div class="form-group">
+        <label><u>OFFERING METHOD</u></label><br>
+<label>MOBILE MONEY:*182*7*1*304570#</label><input type="text" id="momo" placeholder="Enter Amount" required><br>
+<label>IM BANK:2309000349</label><input type="text" id="bank" name="mobile" placeholder="Enter Amount" required>
+</div>
+            <div class="form-group">
+                <label for="additional-info">Additional Information:</label>
+                <textarea id="additional-info" name="additional-info" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn">Submit</button>
+                <button type="reset" class="btn secondary">Reset</button>
+            </div>
+            <div class="form-group">
+            	<tr> <td colspan="3">  <p>Contact us +25079135440<br>Location: <br>Kigali-Rwanda<br>Eastern Province<br> Musanze District <br> Muhoza sector<br> For more info use Google map with street KN-500 </p>
+		<tr> <td colspan="3"> <p>inezakabaya@gmail.com<br>musanze&copy2020</p></td>
+		</tr>
+	</div>
+
+        </form>
+    </div>
+</body>
+</html>
